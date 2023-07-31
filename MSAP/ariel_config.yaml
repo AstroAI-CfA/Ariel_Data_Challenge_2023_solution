@@ -1,0 +1,70 @@
+# Configuration file for all scripts using autoencoders
+# All file paths are relative to the parent script directory, unless otherwise stated
+
+# spectrum_fit.py config file
+---
+# Variables for training the network
+net:
+  # Name of the version of the model configuration to be used
+  version: "A.3.3"
+  # State to be loaded, 0 if not state to be loaded
+  iteration-load: "1"
+  # id of the state to be saved
+  iteration-save: "1"
+  # Names of the objects:
+  decoder-name: 'Decoder'
+  encoder-name: 'Encoder'
+  decoder_scale-name: 'Decoder_Scale'
+  decoder_shape-name: 'Decoder_Shape'
+
+path:
+  # Main path for all folders
+  local-path: 'insert_your_path'
+  # relative path to the folder containing features, targets and metadatas
+  data-path: 'data/'
+  # relative path to the folder containing the network configurations
+  network-config-path: 'network_configs/'
+  # relative path to the folder to save plots
+  plots-path: 'plots/'
+  # relative path to the folder to save losses
+  losses-path: 'losses/'
+  # relative path to the folder to save model states
+  states-path: 'model_states/'
+  # relative path to the folder to save outputs
+  outputs-path: 'outputs/'
+  # wavelength array
+  x-data: 'data/freq_1.pt'
+
+training:
+  # Number of epochs to train for
+  epochs: 250
+  # Learning rate for training
+  learning-rate: 5.e-6
+
+# File location for different datasets
+data:
+  run-id: "1" 
+
+# Model for the network to learn
+model:
+  # Number of free parameters
+  parameters-number: 7
+  aux-number: 8
+
+  log-parameters:
+    # - 2
+    # - 3
+    # - 4
+    # - 5
+    # - 6
+
+  parameter-names:
+    - 'R'
+    - 'T'
+    - 'P'
+    - 'H2O'
+    - 'CO2'
+    - 'CO'
+    - 'CH4'
+    - 'NH3'
+

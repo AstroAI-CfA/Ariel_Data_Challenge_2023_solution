@@ -1,0 +1,40 @@
+# Configuration file for all scripts using Zuko Normalizing Flows
+# All file paths are relative to the parent script directory, unless otherwise stated
+
+# spectrum_fit.py config file
+---
+# Variables for training the network
+net:
+  # Name of the version of the model configuration to be used
+  version: "ZKA.6.1"
+  # State to be loaded, 0 if not state to be loaded
+  iteration-load: "2"
+  # id of the state to be saved
+  iteration-save: "2"
+  # Names of the objects:
+  decoder-name: 'Decoder'
+
+path:
+  # Main path for all folders
+  local-path: 'insert_your_path'
+  # relative path to the folder containing features, targets and metadatas
+  data-path: 'data/'
+  # relative path to the folder containing the network configurations
+  network-config-path: 'network_configs/'
+  # relative path to the folder to save plots
+  plots-path: 'plots/'
+  # relative path to the folder to save losses
+  losses-path: 'losses/'
+  # relative path to the folder to save model states
+  states-path: 'model_states/'
+  # relative path to the folder to save outputs
+  outputs-path: 'outputs/'
+  # wavelength array
+  x-data: 'data/freq_1.pt'
+
+# File location for different datasets
+data:
+  run-id: "7" 
+  n-test: 1000
+  # run-id: "1" 
+  # n-test: 4000

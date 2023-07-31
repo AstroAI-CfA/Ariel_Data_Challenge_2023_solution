@@ -1,0 +1,15 @@
+astropy
+numpy
+joblib
+optuna
+pandas
+torch
+plotly
+matplotlib
+torchvision
+PyYAML
+PyQt5
+sbi
+corner
+zuko
+SciencePlot
